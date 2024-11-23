@@ -67,23 +67,58 @@ margin: 0;
 }
 
 .search-bar {
+    margin: 20px auto;
+    text-align: center;
+    width: 400px;
     display: flex;
     align-items: center;
 }
 
-.search-bar input {
-    width: 400px;
-    padding: 14px;
-    border-radius: 15px;
-    border: none;
+#searchInput {
+    width: 100%;
+    padding: 10px;
+    border-radius: 15px 0 0 15px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    border-right: none; 
 }
 
 .clear-search {
-    background: none;
+    background-color: #ff0000;
+    color: white;
     border: none;
+    border-radius: 0 5px 5px 0; 
     cursor: pointer;
     font-size: 16px;
-    margin-left: -20px;
+    margin-left: -1px; 
+}
+.search-button img {
+    width: 20px;
+    height: 20px;
+    cursor: pointer;
+}
+
+.search-results {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    display: none; 
+    margin: 0 auto; 
+    width: 400px; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.search-results .result-item {
+    padding: 10px;
+    border-bottom: 1px solid #eee;
+    cursor: pointer;
+    color: #181a1b;
+}
+
+.search-results .result-item:hover {
+    background-color: #f9f9f9;
 }
 
 .highlights {
@@ -117,6 +152,7 @@ margin: 0;
     top: 50%;
     transform: translateY(-50%);
     z-index: 1;
+    border-radius: 15px;
 }
 
 .left {
@@ -235,7 +271,7 @@ margin: 0;
 .favorite-info {
     display: flex;
     align-items: center;
-    justify-content: flex-end; /* Alinha à direita dentro da coluna */
+    justify-content: flex-end; 
     margin-top: 10px;
 }
 
@@ -253,4 +289,31 @@ margin: 0;
 
 .favorite-button:hover {
     transform: scale(1.2);
+}
+#calendar {
+    max-width: 100%;
+    width: 400px;
+    height: auto;
+    margin: 0 auto;
+    padding: 5px;
+    background-color: #242526; 
+    border: none; 
+    border-radius: 10px; 
+}
+.fc-event {
+    background-color: #007BFF; 
+    color: #fff; 
+    border: none; 
+    border-radius: 5px;
+    padding: 5px; 
+    font-size: 14px; 
+}
+.fc-toolbar-title {
+    color: #fefefe; 
+    font-size: 18px; 
+    font-weight: bold;
+}
+.fc-daygrid-day-number {
+    color: #007BFF; 
+    font-weight: bold; 
 }
