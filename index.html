@@ -4,6 +4,8 @@
         <meta charset="UTF-8"> 
         <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
         <title>Anime Portal</title> 
+        <link href='https://unpkg.com/fullcalendar@5.10.2/main.min.css' rel='stylesheet' />
+        <script src='https://unpkg.com/fullcalendar@5.10.2/main.min.js'></script>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
@@ -38,7 +40,9 @@
             </button>
         </div>
     </header>
-
+    <div id="search-results" class="search-results">
+<!-- pesquisa results -->
+    </div>
     <!-- destaques -->
 
     <section class="highlights">
@@ -47,24 +51,44 @@
             <button class="scroll-button arrow left">&#10094;</button>
             <div class="carousel" id="animeList">
                 <div class="anime-card">
-                    <img src="https://cdn.myanimelist.net/images/manga/5/256607.jpg" alt="Anime 1">
-                    <p>Kaoru Hana wa Rin to Saku</p>
+                    <img src="https://cdn.myanimelist.net/images/anime/9/7804l.jpg?_gl=1*142ukd5*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjMyMTU3MC4zMTIuMS4xNzMyMzIzNjI4LjUuMC4w" alt="Anime 1">
+                    <p>Soul Eater</p>
                 </div>
                 <div class="anime-card">
-                    <img src="https://cdn.myanimelist.net/images/manga/2/273634l.jpg?_gl=1*ck92lh*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjE5NzIxMi4zMDUuMS4xNzMyMTk3Mjg1LjU1LjAuMA.." alt="Anime 2">
+                    <img src="https://cdn.myanimelist.net/images/anime/1806/126216l.jpg?_gl=1*2puleg*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjMyMTU3MC4zMTIuMS4xNzMyMzIzNTQ1LjE0LjAuMA.." alt="Anime 2">
                     <p>Chainsaw Man</p>
                 </div>
                 <div class="anime-card">
-                    <img src="https://cdn.myanimelist.net/images/manga/2/267619l.jpg?_gl=1*17vmvyj*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjE5NzIxMi4zMDUuMS4xNzMyMTk3MzQyLjYwLjAuMA.." alt="Anime 3">
+                    <img src="https://cdn.myanimelist.net/images/anime/1341/145349l.jpg?_gl=1*1r4mon1*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjMyMTU3MC4zMTIuMS4xNzMyMzIzNDU1LjQ0LjAuMA.." alt="Anime 3">
                     <p>Ao no Hako</p>
                 </div>
                 <div class="anime-card">
-                    <img src="https://cdn.myanimelist.net/images/manga/3/250732l.jpg?_gl=1*1jmbd6*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjIzOTkyMi4zMDguMS4xNzMyMjQyNDc2LjM0LjAuMA.." alt="Anime 4">
+                    <img src="https://cdn.myanimelist.net/images/anime/1990/139975l.jpg" alt="Anime 4">
                     <p>Dandadan</p>
                 </div>
                 <div class="anime-card">
-                    <img src="https://cdn.myanimelist.net/images/manga/1/307300l.jpg" alt="Anime 5">
+                    <img src="https://cdn.myanimelist.net/images/anime/1695/111486l.jpg?_gl=1*1uf0jj9*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjMyMTU3MC4zMTIuMS4xNzMyMzIzMTk0LjQwLjAuMA.." alt="Anime 5">
                     <p>Horimiya</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://cdn.myanimelist.net/images/anime/1448/127956l.jpg?_gl=1*1r5f86k*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjMyMTU3MC4zMTIuMS4xNzMyMzIyOTc4LjIxLjAuMA.." alt="Anime 6">
+                    <p>Bocchi the Rock!</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://cdn.myanimelist.net/images/anime/1553/137254l.jpg?_gl=1*1ehocob*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjMyMTU3MC4zMTIuMS4xNzMyMzIzMDM5LjQzLjAuMA.." alt="Anime 7">
+                    <p>Sousou no Frieren</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://cdn.myanimelist.net/images/anime/1436/109969l.jpg?_gl=1*1vay4nj*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjMyMTU3MC4zMTIuMS4xNzMyMzIzMTAwLjQzLjAuMA.." alt="Anime 8">
+                    <p>Kaguya-sama: Love is War</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://cdn.myanimelist.net/images/anime/1032/135088l.jpg?_gl=1*qfe0k0*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjMyMTU3MC4zMTIuMS4xNzMyMzIzMjc1LjE5LjAuMA.." alt="Anime 9">
+                    <p>Code Geass: Lelouch of the Rebellion</p>
+                </div>
+                <div class="anime-card">
+                    <img src="https://cdn.myanimelist.net/images/anime/1079/138100l.jpg?_gl=1*1rtnfa7*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjMyMTU3MC4zMTIuMS4xNzMyMzIzMzY3LjUwLjAuMA.." alt="Anime 10">
+                    <p>Death Note</p>
                 </div>
             </div>
             <button class="scroll-button arrow right">&#10095;</button>
@@ -125,6 +149,7 @@
     </div>
     <div class="calendar">
         <h3>Calendar</h3>
+        <div id='calendar'></div>
         <!-- widget calendario aq -->
     </div>
     <section>
@@ -137,7 +162,7 @@
 </section>
 </aside>
 </div>
-
+  
 <script src="ditto.js"></script>
         </body>
         </html>
