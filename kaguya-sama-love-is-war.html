@@ -1,0 +1,113 @@
+<!DOCTYPE html> 
+<html lang="pt-BR"> 
+    <head> 
+        <meta charset="UTF-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+        <title>Anime Portal</title> 
+        <link href='https://unpkg.com/fullcalendar@5.10.2/main.min.css' rel='stylesheet' />
+        <script src='https://unpkg.com/fullcalendar@5.10.2/main.min.js'></script>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="anime_pages.css"> 
+    </head> 
+        <body>
+<div class="container">
+    <!-- menu lateral -->
+    <nav class="sidebar">
+<ul>
+ <li><a  id="home" href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IndoaXRlIiBkPSJNMjAgMTBhMSAxIDAgMSAwLTIgMHpNNiAxMGExIDEgMCAwIDAtMiAwem0xNC4yOTMgMi43MDdhMSAxIDAgMCAwIDEuNDE0LTEuNDE0ek0xMiAzbC43MDctLjcwN2ExIDEgMCAwIDAtMS40MTQgMHptLTkuNzA3IDguMjkzYTEgMSAwIDEgMCAxLjQxNCAxLjQxNHpNNyAyMmgxMHYtMkg3em0xMy0zdi05aC0ydjl6TTYgMTl2LTlINHY5em0xNS43MDctNy43MDdsLTktOWwtMS40MTQgMS40MTRsOSA5em0tMTAuNDE0LTlsLTkgOWwxLjQxNCAxLjQxNGw5LTl6TTE3IDIyYTMgMyAwIDAgMCAzLTNoLTJhMSAxIDAgMCAxLTEgMXpNNyAyMGExIDEgMCAwIDEtMS0xSDRhMyAzIDAgMCAwIDMgM3oiLz48L3N2Zz4=" alt="Home Icon">Home</a></li>
+ <li><a  id="most-popular" href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIgc3Ryb2tlLXdpZHRoPSIyIiBkPSJNMyAxM2ExIDEgMCAwIDEgMS0xaDRhMSAxIDAgMCAxIDEgMXY2YTEgMSAwIDAgMS0xIDFINGExIDEgMCAwIDEtMS0xem02LTRhMSAxIDAgMCAxIDEtMWg0YTEgMSAwIDAgMSAxIDF2MTBhMSAxIDAgMCAxLTEgMWgtNGExIDEgMCAwIDEtMS0xem02LTRhMSAxIDAgMCAxIDEtMWg0YTEgMSAwIDAgMSAxIDF2MTRhMSAxIDAgMCAxLTEgMWgtNGExIDEgMCAwIDEtMS0xek00IDIwaDE0Ii8+PC9zdmc+" alt="Chart Bar">Most Popular</a></li>   
+ <li><a  id="best-characters" href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS41IiBkPSJNOS4xNTMgNS40MDhDMTAuNDIgMy4xMzYgMTEuMDUzIDIgMTIgMnMxLjU4IDEuMTM2IDIuODQ3IDMuNDA4bC4zMjguNTg4Yy4zNi42NDYuNTQuOTY5LjgyIDEuMTgycy42My4yOTIgMS4zMy40NWwuNjM2LjE0NGMyLjQ2LjU1NyAzLjY4OS44MzUgMy45ODIgMS43NzZjLjI5Mi45NC0uNTQ2IDEuOTIxLTIuMjIzIDMuODgybC0uNDM0LjUwN2MtLjQ3Ni41NTctLjcxNS44MzYtLjgyMiAxLjE4Yy0uMTA3LjM0NS0uMDcxLjcxNy4wMDEgMS40NmwuMDY2LjY3N2MuMjUzIDIuNjE3LjM4IDMuOTI1LS4zODYgNC41MDZzLTEuOTE4LjA1MS00LjIyLTEuMDA5bC0uNTk3LS4yNzRjLS42NTQtLjMwMi0uOTgxLS40NTItMS4zMjgtLjQ1MnMtLjY3NC4xNS0xLjMyOC40NTJsLS41OTYuMjc0Yy0yLjMwMyAxLjA2LTMuNDU1IDEuNTktNC4yMiAxLjAxYy0uNzY3LS41ODItLjY0LTEuODktLjM4Ny00LjUwN2wuMDY2LS42NzZjLjA3Mi0uNzQ0LjEwOC0xLjExNiAwLTEuNDZjLS4xMDYtLjM0NS0uMzQ1LS42MjQtLjgyMS0xLjE4bC0uNDM0LS41MDhjLTEuNjc3LTEuOTYtMi41MTUtMi45NDEtMi4yMjMtMy44ODJTMy41OCA4LjMyOCA2LjA0IDcuNzcybC42MzYtLjE0NGMuNjk5LS4xNTggMS4wNDgtLjIzNyAxLjMyOS0uNDVzLjQ2LS41MzYuODItMS4xODJ6Ii8+PC9zdmc+" alt="favorite Icon">Best Characters</a></li>   
+ <li><a  id="releases" href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IndoaXRlIiBkPSJNMTcgMTRhMSAxIDAgMSAwIDAtMmExIDEgMCAwIDAgMCAybTAgNGExIDEgMCAxIDAgMC0yYTEgMSAwIDAgMCAwIDJtLTQtNWExIDEgMCAxIDEtMiAwYTEgMSAwIDAgMSAyIDBtMCA0YTEgMSAwIDEgMS0yIDBhMSAxIDAgMCAxIDIgMG0tNi0zYTEgMSAwIDEgMCAwLTJhMSAxIDAgMCAwIDAgMm0wIDRhMSAxIDAgMSAwIDAtMmExIDEgMCAwIDAgMCAyIi8+PHBhdGggZmlsbD0id2hpdGUiIGZpbGwtcnVsZT0iZXZlbm9kZCIgZD0iTTcgMS43NWEuNzUuNzUgMCAwIDEgLjc1Ljc1di43NjNjLjY2Mi0uMDEzIDEuMzkxLS4wMTMgMi4xOTMtLjAxM2g0LjExM2MuODAzIDAgMS41MzIgMCAyLjE5NC4wMTNWMi41YS43NS43NSAwIDAgMSAxLjUgMHYuODI3cS4zOS4wMy43MzkuMDc2YzEuMTcyLjE1OCAyLjEyMS40OSAyLjg3IDEuMjM4Yy43NDguNzQ5IDEuMDggMS42OTggMS4yMzggMi44N2MuMTUzIDEuMTQuMTUzIDIuNTk1LjE1MyA0LjQzM3YyLjExMmMwIDEuODM4IDAgMy4yOTQtLjE1MyA0LjQzM2MtLjE1OCAxLjE3Mi0uNDkgMi4xMjEtMS4yMzggMi44N2MtLjc0OS43NDgtMS42OTggMS4wOC0yLjg3IDEuMjM4Yy0xLjE0LjE1My0yLjU5NS4xNTMtNC40MzMuMTUzSDkuOTQ1Yy0xLjgzOCAwLTMuMjk0IDAtNC40MzMtLjE1M2MtMS4xNzItLjE1OC0yLjEyMS0uNDktMi44Ny0xLjIzOGMtLjc0OC0uNzQ5LTEuMDgtMS42OTgtMS4yMzgtMi44N2MtLjE1My0xLjE0LS4xNTMtMi41OTUtLjE1My00LjQzM3YtMi4xMTJjMC0xLjgzOCAwLTMuMjk0LjE1My00LjQzM2MuMTU4LTEuMTcyLjQ5LTIuMTIxIDEuMjM4LTIuODdjLjc0OS0uNzQ4IDEuNjk4LTEuMDggMi44Ny0xLjIzOHEuMzUtLjA0Ni43MzktLjA3NlYyLjVBLjc1Ljc1IDAgMCAxIDcgMS43NU01LjcxIDQuODljLTEuMDA1LjEzNS0xLjU4NS4zODktMi4wMDguODEyUzMuMDI1IDYuNzA1IDIuODkgNy43MXEtLjAzNC4yNTUtLjA1OC41MzloMTguMzM2cS0uMDI0LS4yODQtLjA1OC0uNTRjLS4xMzUtMS4wMDUtLjM4OS0xLjU4NS0uODEyLTIuMDA4cy0xLjAwMy0uNjc3LTIuMDA5LS44MTJjLTEuMDI3LS4xMzgtMi4zODItLjE0LTQuMjg5LS4xNGgtNGMtMS45MDcgMC0zLjI2MS4wMDItNC4yOS4xNE0yLjc1IDEyYzAtLjg1NCAwLTEuNTk3LjAxMy0yLjI1aDE4LjQ3NGMuMDEzLjY1My4wMTMgMS4zOTYuMDEzIDIuMjV2MmMwIDEuOTA3LS4wMDIgMy4yNjItLjE0IDQuMjljLS4xMzUgMS4wMDUtLjM4OSAxLjU4NS0uODEyIDIuMDA4cy0xLjAwMy42NzctMi4wMDkuODEyYy0xLjAyNy4xMzgtMi4zODIuMTQtNC4yODkuMTRoLTRjLTEuOTA3IDAtMy4yNjEtLjAwMi00LjI5LS4xNGMtMS4wMDUtLjEzNS0xLjU4NS0uMzg5LTIuMDA4LS44MTJzLS42NzctMS4wMDMtLjgxMi0yLjAwOWMtLjEzOC0xLjAyNy0uMTQtMi4zODItLjE0LTQuMjg5eiIgY2xpcC1ydWxlPSJldmVub2RkIi8+PC9zdmc+" alt="Releases Icon">Releases</a></li>   
+ <li><a  id="settings" href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxnIGZpbGw9Im5vbmUiIHN0cm9rZT0id2hpdGUiIHN0cm9rZS13aWR0aD0iMS41Ij48Y2lyY2xlIGN4PSIxMiIgY3k9IjEyIiByPSIzIi8+PHBhdGggZD0iTTEzLjc2NSAyLjE1MkMxMy4zOTggMiAxMi45MzIgMiAxMiAycy0xLjM5OCAwLTEuNzY1LjE1MmEyIDIgMCAwIDAtMS4wODMgMS4wODNjLS4wOTIuMjIzLS4xMjkuNDg0LS4xNDMuODYzYTEuNjIgMS42MiAwIDAgMS0uNzkgMS4zNTNhMS42MiAxLjYyIDAgMCAxLTEuNTY3LjAwOGMtLjMzNi0uMTc4LS41NzktLjI3Ni0uODItLjMwOGEyIDIgMCAwIDAtMS40NzguMzk2QzQuMDQgNS43OSAzLjgwNiA2LjE5MyAzLjM0IDdzLS43IDEuMjEtLjc1MSAxLjYwNWEyIDIgMCAwIDAgLjM5NiAxLjQ3OWMuMTQ4LjE5Mi4zNTUuMzUzLjY3Ni41NTVjLjQ3My4yOTcuNzc3LjgwMy43NzcgMS4zNjFzLS4zMDQgMS4wNjQtLjc3NyAxLjM2Yy0uMzIxLjIwMy0uNTI5LjM2NC0uNjc2LjU1NmEyIDIgMCAwIDAtLjM5NiAxLjQ3OWMuMDUyLjM5NC4yODUuNzk4Ljc1IDEuNjA1Yy40NjcuODA3LjcgMS4yMSAxLjAxNSAxLjQ1M2EyIDIgMCAwIDAgMS40NzkuMzk2Yy4yNC0uMDMyLjQ4My0uMTMuODE5LS4zMDhhMS42MiAxLjYyIDAgMCAxIDEuNTY3LjAwOGMuNDgzLjI4Ljc3Ljc5NS43OSAxLjM1M2MuMDE0LjM4LjA1LjY0LjE0My44NjNhMiAyIDAgMCAwIDEuMDgzIDEuMDgzQzEwLjYwMiAyMiAxMS4wNjggMjIgMTIgMjJzMS4zOTggMCAxLjc2NS0uMTUyYTIgMiAwIDAgMCAxLjA4My0xLjA4M2MuMDkyLS4yMjMuMTI5LS40ODMuMTQzLS44NjNjLjAyLS41NTguMzA3LTEuMDc0Ljc5LTEuMzUzYTEuNjIgMS42MiAwIDAgMSAxLjU2Ny0uMDA4Yy4zMzYuMTc4LjU3OS4yNzYuODE5LjMwOGEyIDIgMCAwIDAgMS40NzktLjM5NmMuMzE1LS4yNDIuNTQ4LS42NDYgMS4wMTQtMS40NTNzLjctMS4yMS43NTEtMS42MDVhMiAyIDAgMCAwLS4zOTYtMS40NzljLS4xNDgtLjE5Mi0uMzU1LS4zNTMtLjY3Ni0uNTU1QTEuNjIgMS42MiAwIDAgMSAxOS41NjIgMTJjMC0uNTU4LjMwNC0xLjA2NC43NzctMS4zNmMuMzIxLS4yMDMuNTI5LS4zNjQuNjc2LS41NTZhMiAyIDAgMCAwIC4zOTYtMS40NzljLS4wNTItLjM5NC0uMjg1LS43OTgtLjc1LTEuNjA1Yy0uNDY3LS44MDctLjctMS4yMS0xLjAxNS0xLjQ1M2EyIDIgMCAwIDAtMS40NzktLjM5NmMtLjI0LjAzMi0uNDgzLjEzLS44Mi4zMDhhMS42MiAxLjYyIDAgMCAxLTEuNTY2LS4wMDhhMS42MiAxLjYyIDAgMCAxLS43OS0xLjM1M2MtLjAxNC0uMzgtLjA1LS42NC0uMTQzLS44NjNhMiAyIDAgMCAwLTEuMDgzLTEuMDgzWiIvPjwvZz48L3N2Zz4=" alt="Settings Icon">Settings</a></li>   
+ <li><a  id="logout" href="#"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9IndoaXRlIiBkPSJNNSAyMXEtLjgyNSAwLTEuNDEyLS41ODdUMyAxOVY1cTAtLjgyNS41ODgtMS40MTJUNSAzaDd2Mkg1djE0aDd2MnptMTEtNGwtMS4zNzUtMS40NWwyLjU1LTIuNTVIOXYtMmg4LjE3NWwtMi41NS0yLjU1TDE2IDdsNSA1eiIvPjwvc3ZnPg==" alt="Logout Icon">Logout</a></li>   
+</ul>
+    </nav>
+<!-- area principal -->
+<main class="main-content">
+    <header class="header">
+        <h1>Kaguya-sama:Love is War</h1>
+        <div class="search-bar">
+            <input type="text" id="searchInput" placeholder="Search for your favorite anime...">
+            <button id="clearSearch" class="clear-search" style="display: none;">X</button>
+            <button id="searchButton" class="search-button">
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxwYXRoIGZpbGw9ImJsYWNrIiBkPSJtMTkuNiAyMWwtNi4zLTYuM3EtLjc1LjYtMS43MjUuOTVUOS41IDE2cS0yLjcyNSAwLTQuNjEyLTEuODg4VDMgOS41dDEuODg4LTQuNjEyVDkuNSAzdDQuNjEzIDEuODg4VDE2IDkuNXEwIDEuMS0uMzUgMi4wNzVUMTQuNyAxMy4zbDYuMyA2LjN6TTkuNSAxNHExLjg3NSAwIDMuMTg4LTEuMzEyVDE0IDkuNXQtMS4zMTItMy4xODdUOS41IDVUNi4zMTMgNi4zMTNUNSA5LjV0MS4zMTMgMy4xODhUOS41IDE0Ii8+PC9zdmc+" alt="Search">
+            </button>
+        </div>
+    </header>
+    <div id="search-results" class="search-results">
+    </div>
+    <section class="anime-details">
+        <h2>Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen</h2>
+        <div class="anime-info">
+            <img src="https://cdn.myanimelist.net/images/anime/1436/109969l.jpg?_gl=1*67cvdk*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjU1ODY1Mi4zMTkuMS4xNzMyNTYyMzYzLjMyLjAuMA.." alt="aniem">
+            <div class="info">
+                <p><strong>Score:</strong> 8.40</p>
+                <p><strong>Ranking:</strong> #193</p>
+                <p><strong>Popularity:</strong> #51</p>
+                <p><strong>Synopsis:</strong> At the renowned Shuchiin Academy, Miyuki Shirogane and Kaguya Shinomiya are the student body's top representatives. Ranked the top student in the nation and respected by peers and mentors alike, Miyuki serves as the student council president. Alongside him, the vice president Kaguya—eldest daughter of the wealthy Shinomiya family—excels in every field imaginable. They are the envy of the entire student body, regarded as the perfect couple.</p>
+            </div>
+        </div>
+        <div class="video-section">
+            <iframe id="anime-video" width="560" height="315" src="https://www.youtube.com/watch?v=kmy4hX5eTzI" frameborder="0" allowfullscreen></iframe>
+        </div>
+    </section>
+    <div class="anime-actions">
+        <label for="rating">Nota:</label>
+        <select id="rating">
+            <option value="10">10</option>
+            <option value="9">9</option>
+            <option value="8">8</option>
+            <option value="7">7</option>
+            <option value="6">6</option>
+            <option value="5">5</option>
+            <option value="4">4</option>
+            <option value="3">3</option>
+            <option value="2">2</option>
+            <option value="1">1</option>
+        </select>
+        
+        <label for="status">Status:</label>
+        <select id="status">
+            <option value="plan-to-watch">Plan to Watch</option>
+            <option value="watching">Watching</option>
+            <option value="completed">Completed</option>
+            <option value="on-hold">On-Hold</option>
+            <option value="dropped">Dropped</option>
+        </select>
+        
+        <label for="episodes">Episódios Assistidos:</label>
+        <input type="number" id="episodes" min="0" max="25" value="0"> / 25
+        <button id="update-episodes">Atualizar</button>
+    </div>
+        </section>
+        </main>
+        <aside class="right-sidebar">
+            <div class="profile">
+                <h3>[user]</h3>
+                <img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxZW0iIGhlaWdodD0iMWVtIiB2aWV3Qm94PSIwIDAgMjQgMjQiPjxnIGZpbGw9ImJsYWNrIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiIGNsaXAtcnVsZT0iZXZlbm9kZCI+PHBhdGggZD0iTTE2IDlhNCA0IDAgMSAxLTggMGE0IDQgMCAwIDEgOCAwbS0yIDBhMiAyIDAgMSAxLTQgMGEyIDIgMCAwIDEgNCAwIi8+PHBhdGggZD0iTTEyIDFDNS45MjUgMSAxIDUuOTI1IDEgMTJzNC45MjUgMTEgMTEgMTFzMTEtNC45MjUgMTEtMTFTMTguMDc1IDEgMTIgMU0zIDEyYzAgMi4wOS43MTMgNC4wMTQgMS45MDggNS41NDJBOC45OSA4Ljk5IDAgMCAxIDEyLjA2NSAxNGE4Ljk4IDguOTggMCAwIDEgNy4wOTIgMy40NThBOSA5IDAgMSAwIDMgMTJtOSA5YTguOTYgOC45NiAwIDAgMS01LjY3Mi0yLjAxMkE2Ljk5IDYuOTkgMCAwIDEgMTIuMDY1IDE2YTYuOTkgNi45OSAwIDAgMSA1LjY4OSAyLjkyQTguOTYgOC45NiAwIDAgMSAxMiAyMSIvPjwvZz48L3N2Zz4=" alt="Profile Picture">
+            </div>
+            <div class="calendar">
+                <h3>Calendar</h3>
+                <div id='calendar'></div>
+                <!-- widget calendario aq -->
+            </div>
+            <section>
+            <div class="releases">
+                <h3>Most Anticipated Releases</h3>
+                <div class="release-list">
+                    <!-- lanmentos aq -->
+                </div>
+            </div>
+        </section>
+        </aside>
+        </div>
+          
+        <script src="ditto.js"></script>
+                </body>
+                </html>
