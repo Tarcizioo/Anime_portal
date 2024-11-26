@@ -131,29 +131,38 @@ document.getElementById('settings').addEventListener('click', function() {
 document.getElementById('logout').addEventListener('click', function() {
     window.location.href = 'index.html';
 });
-
-document.querySelector('.video-section').addEventListener('click', function() {
-    const videoUrl = document.getElementById('anime-video').src;
-    window.open(videoUrl, '_blank');
-});
-
-document.addEventListener('DOMContentLoaded', function () {
+document.addEventListener('DOMContentLoaded', function() {
     const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
-    const usernameElement = document.getElementById('sidebar-username');
-    const profilePictureElement = document.getElementById('sidebar-profile-picture');
+    if (loggedInUser) {
+        document.getElementById('profile-name').textContent = loggedInUser.username;
+    } else {
+        document.getElementById('profile-name').textContent = 'Usuário não logado';
+    }
+});
+document.addEventListener('DOMContentLoaded', function() {
+    console.log('DOM completamente carregado e analisado');
+
+    // Verificar se o item 'loggedInUser' está no localStorage
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+    console.log('Usuário logado:', loggedInUser);
 
     if (loggedInUser) {
-        // Verifica e atualiza o nome do usuário
-        usernameElement.textContent = loggedInUser.username || '[Nome do Usuário]';
-
-        // Verifica e atualiza a imagem do perfil
-        if (loggedInUser.profilePicture) {
-            profilePictureElement.src = loggedInUser.profilePicture; // Imagem do usuário
+        const profileGreetingElement = document.getElementById('profile-greeting');
+        
+        // Verificar se o elemento existe
+        if (profileGreetingElement) {
+            profileGreetingElement.textContent = `Hello, ${loggedInUser.username}!`;
+            console.log('Mensagem de saudação exibida:', `Hello, ${loggedInUser.username}!`);
         } else {
-            profilePictureElement.src = 'https://via.placeholder.com/150'; // Imagem padrão
+            console.error('Elemento com ID "profile-greeting" não encontrado');
         }
     } else {
-        // Se não há usuário logado, redireciona para a página de login
-        window.location.href = 'index.html';
+        console.error('Nenhum usuário logado encontrado no localStorage');
+        const profileGreetingElement = document.getElementById('profile-greeting');
+        
+        // Verificar se o elemento existe
+        if (profileGreetingElement) {
+            profileGreetingElement.textContent = 'Hello, Guest!';
+        }
     }
 });
