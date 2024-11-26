@@ -58,25 +58,6 @@ function toggleFavorite(event, character) {
     document.getElementById(`favorites-${character}`).innerText = favorites[character];
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-    var calendarEl = document.getElementById('calendar');
-    var calendar = new FullCalendar.Calendar(calendarEl, {
-        initialView: 'dayGridMonth',
-        events: [
-            {
-                title: 'Evento 1',
-                start: '2024-11-23',
-            },
-            {
-                title: 'Evento 2',
-                start: '2024-11-25',
-                end: '2024-11-27'
-            }
-        ]
-    });
-    calendar.render();
-});
-
 const animes = [
     { title: "Death Note", description: "A high school student discovers a supernatural notebook.", url: "death-note.html" },
     { title: "Soul Eater", description: "Students at the Death Weapon Meister Academy learn to harvest souls.", url: "soul-eater.html" },
@@ -148,7 +129,7 @@ document.getElementById('settings').addEventListener('click', function() {
 });
 
 document.getElementById('logout').addEventListener('click', function() {
-    window.location.href = 'logout.html';
+    window.location.href = 'login.html';
 });
 
 document.querySelector('.video-section').addEventListener('click', function() {
