@@ -1,6 +1,6 @@
 body {
     font-family: 'Lexend', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #232628;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,12 +9,13 @@ body {
 }
 
 .register-container, .success-message {
-    background-color: #fff;
+    background-color: #181a1b;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 300px;
+    color: #fefefe;
 }
 
 .register-container h1, .success-message h2 {
@@ -39,16 +40,17 @@ body {
 .register-container button, .success-message button {
     width: 100%;
     padding: 10px;
-    background-color: #2c3e50;
+    background-color: #4f1271;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    font-family: "Lexend", serif;
 }
 
 .register-container button:hover, .success-message button:hover {
-    background-color: #34495e;
+    background-color: #5d0f86;
 }
 
 .error-message {
