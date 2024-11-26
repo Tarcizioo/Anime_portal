@@ -47,6 +47,7 @@ body {
     cursor: pointer;
     font-size: 16px;
     font-family: "Lexend", serif;
+    margin-bottom: 10px;
 }
 
 .login-container button:hover {

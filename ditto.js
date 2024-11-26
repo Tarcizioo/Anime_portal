@@ -136,3 +136,35 @@ document.querySelector('.video-section').addEventListener('click', function() {
     const videoUrl = document.getElementById('anime-video').src;
     window.open(videoUrl, '_blank');
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+    // Recupera o usuário logado do localStorage
+    const loggedInUser = JSON.parse(localStorage.getItem('loggedInUser'));
+
+    if (loggedInUser) {
+        console.log('Usuário logado:', loggedInUser);
+
+        // Atualizando o nome do usuário no HTML
+        const usernameElement = document.getElementById('sidebar-username');
+        const profilePictureElement = document.getElementById('sidebar-profile-picture');
+
+        if (usernameElement) {
+            usernameElement.textContent = loggedInUser.username || '[Nome não disponível]';
+        } else {
+            console.error('Elemento "sidebar-username" não encontrado!');
+        }
+
+        if (profilePictureElement) {
+            if (loggedInUser.profilePicture) {
+                profilePictureElement.src = loggedInUser.profilePicture;
+            } else {
+                profilePictureElement.src = 'https://via.placeholder.com/150'; // Placeholder externo
+            }
+        } else {
+            console.error('Elemento "sidebar-profile-picture" não encontrado!');
+        }
+    } else {
+        console.warn('Nenhum usuário logado. Redirecionando...');
+        window.location.href = 'index.html'; // Redireciona para a página de login
+    }
+});
