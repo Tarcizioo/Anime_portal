@@ -109,7 +109,7 @@ function hideResults() {
     resultsContainer.style.display = 'none';
 }
 document.getElementById('home').addEventListener('click', function() {
-    window.location.href = 'index.html';
+    window.location.href = 'ditto.html';
 });
 
 document.getElementById('most-popular').addEventListener('click', function() {
