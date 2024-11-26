@@ -7,7 +7,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     // Validação simples (substitua isso pela lógica de autenticação real)
     if (username === 'Tarcizio' && password === '12345') {
-        window.location.href = 'index.html'; // Redireciona para a página principal
+        window.location.href = 'ditto.html'; // Redireciona para a página principal
     } else {
         errorMessage.textContent = 'Nome de usuário ou senha incorretos!';
     }
