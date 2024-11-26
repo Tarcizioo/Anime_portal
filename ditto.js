@@ -129,7 +129,7 @@ document.getElementById('settings').addEventListener('click', function() {
 });
 
 document.getElementById('logout').addEventListener('click', function() {
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
 });
 
 document.querySelector('.video-section').addEventListener('click', function() {
