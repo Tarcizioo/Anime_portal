@@ -21,6 +21,7 @@ A personal project developed as part of a training in **HTML**, **CSS**, and **J
 - This is a personal project and does not currently accept external contributions.
 - No license has been defined for this project.
 
+## Screenshots
 ![Captura de tela 2024-11-26 221147](https://github.com/user-attachments/assets/081e4437-2052-4e7d-a896-87cb2a94c31c) 
 ![Captura de tela 2024-11-26 221310](https://github.com/user-attachments/assets/faca6409-bafd-4f74-b6e3-aa9e689b2fec)
 
