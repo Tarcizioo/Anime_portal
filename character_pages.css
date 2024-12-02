@@ -139,33 +139,7 @@ body{
     height: 70px;
     border-radius: 50%;
 }
-#calendar {
-    max-width: 100%;
-    width: 400px;
-    height: auto;
-    margin: 0 auto;
-    padding: 5px;
-    background-color: #242526; 
-    border: none; 
-    border-radius: 10px; 
-}
-.fc-event {
-    background-color: #007BFF; 
-    color: #fff; 
-    border: none; 
-    border-radius: 5px;
-    padding: 5px; 
-    font-size: 14px; 
-}
-.fc-toolbar-title {
-    color: #fefefe; 
-    font-size: 18px; 
-    font-weight: bold;
-}
-.fc-daygrid-day-number {
-    color: #007BFF; 
-    font-weight: bold; 
-}
+
 .anime-details{
     background-color: #181a1b;
     padding: 20px;
