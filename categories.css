@@ -121,220 +121,12 @@ hmtl, body {
     .search-results .result-item:hover {
         background-color: #f9f9f9;
     }
-    
-    .highlights {
-        position: relative;
-        margin: 20px 0;
-        overflow: hidden;
-    }
-    
-    .scroll-container {
-        display: flex;
-        align-items: center;
-        overflow: hidden;
-        position: relative;
-    }
-    
-    .carousel {
-        display: flex;
-        gap: 20px;
-        padding: 20px 0;
-        width: 100%;
-        scroll-snap-type: x mandatory;
-    }
-    
-    .scroll-button {
-        background-color: rgba(0, 0, 0, 0.5);
-        color: #fefefe;
-        border: none;
-        cursor: pointer;
-        padding-top: 40px;
-        padding-bottom: 40px;
-        position: absolute;
-        top: 50%;
-        transform: translateY(-50%);
-        z-index: 1;
-        border-radius: 15px;
-    }
-    
-    .left {
-        left: 0;
-    }
-    
-    .right {
-        right: 0;
-    }
-    
-    .scroll-button:hover {
-        background-color: rgba(0, 0, 0, 0.7);
-    }
-    
-    .anime-card {
-        background-color: none  ;
-        color: #fefefe;
-        padding: 5px;
-        border-radius: 10px;
-        width: 100px;
-        text-align: center;
-        display: inline-block;
-    }
-    .anime-card a{
-        text-decoration: none;
-        color: inherit;
-    }
-    
-    .anime-card img {
-        width: 100%;
-        height: 380px;
-        border-radius: 10px;
-        cursor: pointer;
-    }
-    
-    .anime-card p {
-        margin: 10px 0 0 0;
-        text-decoration: none;
-        color: inherit;
-    }
-    .anime-card p:hover{
-        cursor: pointer;
-        text-decoration: underline;
-    }
-    
     /* Barra Lateral Direita */
     .right-sidebar {
         width: 300px;
         color: #fefefe;
         background-color: #181a1b;
         padding: 20px;
-    }
-    
-    .profile {
-        text-align: center;
-    }
-    
-    .profile img {
-        width: 70px;
-        height: 70px;
-        border-radius: 50%;
-    }
-    .favorites {
-        background-color: #181a1b;
-        border-radius: 15px;
-        padding: 20px;
-        color: #fefefe;
-    }
-    
-    .character-list {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        align-items: center;
-    }
-    .character-link{
-        text-decoration: none;
-        color: inherit;
-        width: 100%;
-    }
-    
-    .character-card { 
-        display: flex; 
-        align-items: center; 
-        color: #fefefe; 
-        padding: 10px; 
-        border-radius: 10px; 
-        width: 100%; 
-        background-color: #242526; 
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); 
-        margin: 10px 0; }
-    
-    .character-card img{
-        width: 100%;
-        width: 100px;
-        height: auto;
-        border-radius: 10px;
-        margin-right: 20px;
-    }
-    .character-card img:hover{
-        cursor: pointer;
-    }
-    .character-info h3{
-        font-size: 18px;
-        font-weight: bold;
-        cursor: pointer;
-    }
-    .character-info h3:hover{
-        text-decoration: underline;
-    }
-    .character-info p{
-        font-size: 14px;
-        margin: 5px 0 0;
-    }
-    .character-info p:hover{
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    .character-info {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-    
-    .favorite-info {
-        display: flex;
-        align-items: center;
-        justify-content: flex-end; 
-        margin-top: 10px;
-    }
-    
-    .favorite-count {
-        margin-right: 10px;
-    }
-    
-    .favorite-button {
-        background-color: transparent;
-        border: none;
-        cursor: pointer;
-        font-size: 24px;
-        color: red;
-    }
-    
-    .favorite-button:hover {
-        transform: scale(1.2);
-    }
-    .categories{
-        margin-bottom: 10px;
-    }
-    .categories h3{
-        margin-bottom: 10px;
-    }
-    
-    .categories ul{
-        list-style-type: none;
-        padding: 10px;
-        display: flex;
-        flex-wrap: wrap;
-        background-color: #242526;
-        border-radius: 10px;
-    }
-    .categories ul li{
-        margin-bottom: 10px;
-        padding: 10px
-    }
-    .categories ul li a{
-        color: #fefefe;
-        text-decoration: none;
-        font-weight: bold;
-        padding: 10px;
-        border-radius: 10px;
-        background-color: #4f1271;
-    }
-    .categories ul li a:hover{
-        text-decoration: underline;
-        cursor: pointer;
-    }
-    .categories h3:hover{
-        text-decoration: underline;
-        cursor: pointer;
     }
     .releases{
         margin-top: 20px;
@@ -378,8 +170,73 @@ hmtl, body {
         cursor: pointer;
         text-decoration: underline;
     }
-    .categories-link{
-        text-decoration: none;
-        color: inherit;
-        width: 100%;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        background-color: #f8f0f7; /* Fundo rosa claro */
     }
+    
+    categories {
+        background-color: #3d2352; /* Fundo roxo escuro */
+        color: white;
+        padding: 1em;
+        text-align: center;
+    }
+    
+    categories ul {
+        list-style-type: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+    
+    categories ul li {
+        margin: 0.5em;
+    }
+    
+    categories ul li a {
+        text-decoration: none;
+        color: #3d2352; /* Cor do texto */
+        padding: 0.5em 1em;
+    }
+    
+    #advanced-search {
+        padding: 1em;
+        background-color: #181a1b; /* Fundo rosa claro */
+        border-radius: 20px;
+    }
+    
+    #anime-list {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1em;
+        padding: 1em;
+    }
+    
+    .anime-item {
+        border: 1px solid #ccc;
+        padding: 1em;
+        text-align: center;
+        background-color: #fff;
+    }
+    
+    .anime-item img {
+        width: 100%;
+        height: auto;
+    }
+    
+    button {
+        display: block;
+        margin: 1em auto;
+        padding: 0.5em 1em;
+        background-color: #3d2352; /* Fundo roxo */
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+    }
+    
