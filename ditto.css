@@ -35,13 +35,14 @@ margin: 0;
     text-decoration: none;
     display: flex;
     align-items: center;
+    transition:background-color 0.3s ease;
+    border-radius: 15px;
 }
 .sidebar ul li a:hover{
     border-radius: 15px;
     padding: 20px;
     background-color:#4f1271;
     text-decoration-line: underline;
-
 }
 
 .sidebar ul li a img {
@@ -192,6 +193,7 @@ margin: 0;
 }
 .anime-card img:hover{
     transform: translateY(-10px);
+    border-radius: 10px;
 }
 
 .anime-card p {
@@ -310,6 +312,9 @@ margin: 0;
 }
 .categories h3{
     margin-bottom: 10px;
+    background-color: #242526;
+    padding: 10px;
+    border-radius: 15px;
 }
 
 .categories ul{
