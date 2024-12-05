@@ -193,10 +193,10 @@ html, body {
 }
 
 .anime-item {
-    border: 1px solid #ccc;
     padding: 1em;
+    border-radius: 15px;
     text-align: center;
-    background-color: #fff;
+    background-color: #181a1b;
 }
 
 .anime-item img {

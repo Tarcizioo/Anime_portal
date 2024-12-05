@@ -188,6 +188,10 @@ margin: 0;
     height: 380px;
     border-radius: 10px;
     cursor: pointer;
+    transition: transform 0.3s ease-in-out;
+}
+.anime-card img:hover{
+    transform: translateY(-10px);
 }
 
 .anime-card p {
