@@ -1,7 +1,7 @@
 html, body {
     background-color: #181a1b;
     margin: 0;
-    
+    font-family: "Lexend", serif;
 }
 
 /* Container Geral */
@@ -181,32 +181,6 @@ html, body {
     cursor: pointer;
     text-decoration: underline;
 }
-
-/* Busca Avançada */
-#advanced-search {
-    background-color: #181a1b;
-    padding: 1em;
-    border-radius: 15px;
-}
-
-#anime-list {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 1em;
-    padding: 1em;
-}
-
-.anime-item {
-    padding: 1em;
-    border-radius: 15px;
-    text-align: center;
-    background-color: #181a1b;
-}
-
-.anime-item img {
-    width: 100%;
-    height: auto;
-}
 .categories{
     display: flex;
     flex-wrap: wrap;
@@ -228,4 +202,124 @@ html, body {
 }
 .category-button:hover{
     background-color: #4f1271;
+}
+/* Busca Avançada */
+#advanced-search {
+    background-color: #181a1b;
+    padding: 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+    border: 1px solid #4f1271;
+}
+
+#advanced-search h2 {
+    margin-top: 0;
+}
+
+.search-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#search-bar {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+#hide-filters {
+    background-color: #4f1271;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-left: 10px;
+    transition: background-color 0.3s ease;
+}
+
+#hide-filters:hover {
+    background-color: #6d1789;
+}
+
+.form-row {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+.form-row label {
+    margin-right: 10px;
+    min-width: 120px; /* Alinhamento dos labels */
+}
+
+.form-row input, .form-row select {
+    flex: 1;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.form-buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+#search-form button {
+    background-color: #4f1271;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#search-form button:hover {
+    background-color: #6d1789;
+}
+
+/* Lista de Animes */
+#anime-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    background-color: #181a1b;
+    border-radius: 20px;
+}
+
+.anime-item {
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    background-color: #232628;
+    color: #fefefe;
+    transition: transform 0.3s ease;
+}
+
+.anime-item:hover {
+    transform: translateY(-10px);
+}
+
+.anime-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+button#toggle-view {
+    background-color: #4f1271;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button#toggle-view:hover {
+    background-color: #6d1789;
 }

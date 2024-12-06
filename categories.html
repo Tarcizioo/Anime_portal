@@ -65,46 +65,74 @@
     </div>
     <section id="advanced-search">
         <h2>Busca Avançada</h2>
+        <div class="search-container">
+            <input type="text" id="search-bar" placeholder="Pesquisar...">
+            <button id="hide-filters">Hide Filters</button>
+        </div>
         <form id="search-form">
-            <label for="sort-by">Sort by:</label>
-            <select id="sort-by">
-                <option value="name">Nome</option>
-                <option value="year">Ano</option>
-            </select>
-            <label for="filter-tags">Filter tags:</label>
-            <input type="text" id="filter-tags" placeholder="Tags">
-            <label for="content-rating">Content Rating:</label>
-            <select id="content-rating">
-                <option value="all">Todos</option>
-                <option value="pg">PG</option>
-                <option value="pg-13">PG-13</option>
-                <option value="r">R</option>
-            </select>
-            <label for="publication-status">Publication Status:</label>
-            <select id="publication-status">
-                <option value="ongoing">Ongoing</option>
-                <option value="complete">Complete</option>
-                <option value="hiatus">Hiatus</option>
-            </select>
-            <label for="publication-year">Publication year:</label>
-            <input type="number" id="publication-year" placeholder="Ano de Publicação">
-            <button type="reset">Reset Filters</button>
-            <button type="submit">Search</button>
+            <div class="form-row">
+                <label for="sort-by">Sort by:</label>
+                <select id="sort-by">
+                            <option value="none">None</option>
+                            <option value="latest-upload">Latest Upload</option>
+                            <option value="oldest-upload">Oldest Upload</option>
+                            <option value="title-asc">Title Ascending</option>
+                            <option value="title-desc">Title Descending</option>
+                            <option value="highest-rating">Highest Rating</option>
+                            <option value="lowest-rating">Lowest Rating</option>
+                            <option value="most-follows">Most Follows</option>
+                            <option value="fewest-follows">Fewest Follows</option>
+                            <option value="recently-added">Recently Added</option>
+                            <option value="oldest-added">Oldest Added</option>
+                            <option value="year-asc">Year Ascending</option>
+                            <option value="year-desc">Year Descending</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="filter-tags">Filter tags:</label>
+                <input type="text" id="filter-tags" placeholder="Tags">
+            </div>
+            <div class="form-row">
+                <label for="content-rating">Content Rating:</label>
+                <div class="multi-select">
+                    <input type="checkbox" id="rating-safe" name="content-rating" value="safe">
+                    <label for="rating-safe">Safe</label>
+                    <input type="checkbox" id="rating-suggestive" name="content-rating" value="suggestive">
+                    <label for="rating-suggestive">Suggestive</label>
+                    <input type="checkbox" id="rating-erotica" name="content-rating" value="erotica">
+                    <label for="rating-erotica">Erotica</label>
+                </div>
+            </div>
+            <div class="form-row">
+                <label for="publication-status">Publication Status:</label>
+                <select id="publication-status">
+                    <option value="ongoing">Ongoing</option>
+                    <option value="complete">Complete</option>
+                    <option value="hiatus">Hiatus</option>
+                </select>
+            </div>
+            <div class="form-row">
+                <label for="publication-year">Publication year:</label>
+                <input type="number" id="publication-year" placeholder="Ano de Publicação">
+            </div>
+            <div class="form-buttons">
+                <button type="reset">Reset Filters</button>
+                <button type="button" id="feeling-lucky">I'm feeling lucky</button>
+                <button type="submit">Search</button>
+            </div>
         </form>
     </section>
-    <button id="toggle-view">Mudar para apenas imagens</button>
-    <section id="anime-list">
-        <h2>Lista de Animes :</h2>
+        <section id="anime-list">
+        <h2>Lista de Animes</h2>
         <div class="anime-item">
             <img src="https://cdn.myanimelist.net/images/anime/9/7804l.jpg?_gl=1*142ukd5*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjMyMTU3MC4zMTIuMS4xNzMyMzIzNjI4LjUuMC4w" alt="Soul Eater">
             <h3>Soul Eater</h3>
             <p>Descrição do anime...</p>
             <p>Status de Publicação: Ongoing</p>
         </div>
-        <!-- Adicione mais itens conforme necessário -->
     </section>
-
-
+    <button id="toggle-view">Mudar para apenas imagens</button>
+    </section>
 </main>
 
 <aside class="right-sidebar">
