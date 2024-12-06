@@ -6,6 +6,9 @@
         <title>Anime Portal</title> 
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.css"/>
         <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick-theme.css"/>
+        <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
+        <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery/dist/jquery.min.js"></script>
         <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel/slick/slick.min.js"></script>
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -105,10 +108,11 @@
             </div>
             <div class="form-row">
                 <label for="publication-status">Publication Status:</label>
-                <select id="publication-status">
+                <select id="publication-status" multiple="multiple">
                     <option value="ongoing">Ongoing</option>
                     <option value="complete">Complete</option>
                     <option value="hiatus">Hiatus</option>
+                    <option value="cancelled">Cancelled</option>
                 </select>
             </div>
             <div class="form-row">

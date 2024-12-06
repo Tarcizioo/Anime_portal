@@ -166,3 +166,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
 });
+
+$(document).ready(function() {
+    $('#publication-status').select2({
+        placeholder: "Selecione o status",
+        allowClear: true
+    });
+});

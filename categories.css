@@ -261,6 +261,14 @@ html, body {
     border-radius: 5px;
     border: 1px solid #ccc;
 }
+.multi-select {
+    display: flex;
+    gap: 10px;
+}
+
+.multi-select input[type="checkbox"] {
+    margin-right: 5px;
+}
 
 .form-buttons {
     display: flex;
