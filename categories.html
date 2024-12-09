@@ -97,23 +97,19 @@
             </div>
             <div class="form-row">
                 <label for="content-rating">Content Rating:</label>
-                <div class="multi-select">
-                    <input type="checkbox" id="rating-safe" name="content-rating" value="safe">
-                    <label for="rating-safe">Safe</label>
-                    <input type="checkbox" id="rating-suggestive" name="content-rating" value="suggestive">
-                    <label for="rating-suggestive">Suggestive</label>
-                    <input type="checkbox" id="rating-erotica" name="content-rating" value="erotica">
-                    <label for="rating-erotica">Erotica</label>
+                <div class="dropdown-content" id="content-rating-dropdown">
+                    <label><input type="checkbox" id="rating-pg" value="pg"> PG</label>
+                    <label><input type="checkbox" id="rating-pg-13" value="pg-13"> PG-13</label>
+                    <label><input type="checkbox" id="rating-r" value="r"> R</label>
                 </div>
             </div>
             <div class="form-row">
                 <label for="publication-status">Publication Status:</label>
-                <select id="publication-status" multiple="multiple">
-                    <option value="ongoing">Ongoing</option>
-                    <option value="complete">Complete</option>
-                    <option value="hiatus">Hiatus</option>
-                    <option value="cancelled">Cancelled</option>
-                </select>
+                        <div class="dropdown-content" id="dropdown-content">
+                            <label><input type="checkbox" id="publication-complete" value="complete"> Complete</label>
+                            <label><input type="checkbox" id="publication-ongoing" value="ongoing"> Ongoing</label>
+                            <label><input type="checkbox" id="publication-hiatus" value="hiatus"> Hiatus</label>
+                </div>
             </div>
             <div class="form-row">
                 <label for="publication-year">Publication year:</label>

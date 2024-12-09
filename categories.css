@@ -266,10 +266,6 @@ html, body {
     gap: 10px;
 }
 
-.multi-select input[type="checkbox"] {
-    margin-right: 5px;
-}
-
 .form-buttons {
     display: flex;
     justify-content: space-between;
