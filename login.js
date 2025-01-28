@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (userData && username === userData.username && password === userData.password) {
         localStorage.setItem('loggedInUser', JSON.stringify(userData));
-        window.location.href = 'ditto.html'; // Redireciona para a página principal
+        window.location.href = 'home.html'; // Redireciona para a página principal
     } else {
         errorMessage.textContent = 'Nome de usuário ou senha incorretos!';
     }
