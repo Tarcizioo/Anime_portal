@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="home.css"> 
+        <link rel="stylesheet" href="user.css"> 
 </head>
 <body>
     <div class="container">
@@ -33,63 +33,77 @@
         <!-- Main Content -->
         <div class="main-content">
             <!-- Profile Section -->
-            <div class="profile-section">
-                <div class="profile-picture">
-                    <img src="path/to/profile.jpg" alt="Profile Picture" id="profileImage">
-                    <input type="file" id="uploadImage" accept="image/*">
-                    <button id="changePhotoBtn">Change Photo</button>
-                </div>
-                <div class="user-info">
-                    <h1 id="username">Username</h1>
-                    <p id="userEmail">email@example.com</p>
+            <div class="profile-header">
+                <img src="default-avatar.jpg" alt="User Avatar" id="userAvatar">
+                <div>
+                    <h2 id="usernameDisplay">Usuário</h2>
+                    <button class="edit-profile-btn" id="editProfileBtn">Editar Perfil</button>
                 </div>
             </div>
-
-            <!-- Anime Tabs -->
-            <div class="anime-lists">
-                <div class="tabs">
-                    <button class="tab-link active" data-tab="watched">Watched</button>
-                    <button class="tab-link" data-tab="watching">Watching</button>
-                    <button class="tab-link" data-tab="planned">Planned</button>
-                    <button class="tab-link" data-tab="dropped">Dropped</button>
-                </div>
-
-                <!-- Anime Lists Content -->
-                <div class="tab-content">
-                    <div id="watched" class="tab-pane active">
-                        <h2>Watched</h2>
-                        <ul id="watchedList"></ul>
+    
+            <!-- Recently Watched Section -->
+            <div class="recently-watched">
+                <h2>Assistidos Recentemente</h2>
+                <div class="stats">Últimas 22.3 horas assistidas nesta semana</div>
+                <div class="anime-list">
+                    <div class="anime-item">
+                        <img src="anime1.jpg" alt="Anime 1">
+                        <p>Anime 1</p>
                     </div>
-                    <div id="watching" class="tab-pane">
-                        <h2>Watching</h2>
-                        <ul id="watchingList"></ul>
+                    <div class="anime-item">
+                        <img src="anime2.jpg" alt="Anime 2">
+                        <p>Anime 2</p>
                     </div>
-                    <div id="planned" class="tab-pane">
-                        <h2>Planned</h2>
-                        <ul id="plannedList"></ul>
+                    <div class="anime-item">
+                        <img src="anime3.jpg" alt="Anime 3">
+                        <p>Anime 3</p>
                     </div>
-                    <div id="dropped" class="tab-pane">
-                        <h2>Dropped</h2>
-                        <ul id="droppedList"></ul>
+                    <div class="anime-item">
+                        <img src="anime4.jpg" alt="Anime 4">
+                        <p>Anime 4</p>
                     </div>
                 </div>
             </div>
-
-            <!-- Favorites Section -->
-            <div class="favorites">
-                <h2>Favorites</h2>
-                <div class="favorite-animes">
-                    <h3>Favorite Animes</h3>
-                    <ul id="favoriteAnimesList"></ul>
-                </div>
-                <div class="favorite-characters">
-                    <h3>Favorite Characters</h3>
-                    <ul id="favoriteCharactersList"></ul>
-                </div>
+            <div class="categories">
+            <div class="category">
+                <h3>Watched</h3>
+                <ul>
+                    <li>Death Note</li>
+                    <li>Soul Eater</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Watching</h3>
+                <ul>
+                    <li>Attack on Titan</li>
+                    <li>Jujutsu Kaisen</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Planned</h3>
+                <ul>
+                    <li>One Piece</li>
+                    <li>Naruto</li>
+                </ul>
+            </div>
+            <div class="category">
+                <h3>Dropped</h3>
+                <ul>
+                    <li>Bleach</li>
+                </ul>
             </div>
         </div>
     </div>
+            <div class="modal" id="editProfileModal">
+                <div class="modal-content">
+                    <h2>Editar Perfil</h2>
+                    <input type="text" placeholder="Nome de Usuário" id="usernameInput">
+                    <input type="email" placeholder="Email" id="emailInput">
+                    <input type="file" id="avatarInput" accept="image/*">
+                    <button class="save-btn" id="saveProfileBtn">Salvar</button>
+                    <button class="close-btn" id="closeModalBtn">Fechar</button>
+                </div>
+            </div>    
 
-    <script src="home.js"></script> <!-- Link para o arquivo JavaScript -->
-</body>
+    <script src="user.js"></script>
 </html>
