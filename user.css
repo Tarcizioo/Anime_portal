@@ -68,18 +68,17 @@ hmtl, body {
     }
 
     .profile-header img {
-        width: 80px;
-        height: 80px;
+        width: 250px;
+        height: auto;
         border-radius: 50%;
         margin-right: 20px;
     }
 
     .recently-watched {
-        margin-bottom: 40px;
+        margin-bottom: 0px;
     }
 
     .recently-watched h2 {
-        margin-bottom: 20px;
         font-size: 1.5rem;
     }
 
@@ -91,17 +90,18 @@ hmtl, body {
     }
 
     .anime-item {
-        background: #2b2b3c;
+        background:none;
         border-radius: 8px;
-        width: 150px;
-        text-align: center;
-        padding: 10px;
+        width: 300px;
+        height: auto;
+        text-align: start;
+        padding: 50px;
     }
 
     .anime-item img {
-        width: 100%;
-        border-radius: 8px;
-        margin-bottom: 10px;
+        width: 380px;
+        height: 600px;
+        border-radius: 15px;
     }
 
     .stats {
@@ -209,4 +209,28 @@ hmtl, body {
         border: none;
         border-radius: 8px;
         cursor: pointer;
+    }
+    .banner {
+        position: relative;
+        height: 300px; /* Ajuste a altura conforme necessário */
+        background: url() no-repeat center center;
+        background-size: cover;
+    }
+    
+    .banner::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        border-radius: 20px;
+        width: 100%;
+        height: 100%;
+        background: linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.5) 100%);
+    }
+    
+    .profile-header{
+        position: relative;
+        z-index: 1; 
+        color: white;
+        padding: 10px;
     }
