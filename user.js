@@ -37,3 +37,30 @@ const editProfileBtn = document.getElementById('editProfileBtn');
 
             editProfileModal.classList.remove('show');
         });
+        document.getElementById('home').addEventListener('click', function() {
+            window.location.href = 'home.html';
+        });
+        
+        document.getElementById('most-popular').addEventListener('click', function() {
+            window.location.href = 'most-popular.html';
+        });
+        
+        document.getElementById('best-characters').addEventListener('click', function() {
+            window.location.href = 'best-characters.html';
+        });
+        
+        document.getElementById('releases').addEventListener('click', function() {
+            window.location.href = 'releases.html';
+        });
+        
+        document.getElementById('settings').addEventListener('click', function() {
+            window.location.href = 'settings.html';
+        });
+        
+        document.getElementById('user').addEventListener('click', function() {
+            window.location.href = 'user.html';
+        });
+        
+        document.getElementById('logout').addEventListener('click', function() {
+            window.location.href = 'index.html';
+        });
