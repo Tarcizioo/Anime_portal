@@ -12,7 +12,9 @@
         const cropperModal = document.getElementById('cropperModal');
         const overlay = document.getElementById('overlay');
         const imageToCrop = document.getElementById('imageToCrop');
-        let cropper;
+        const cropButton = document.getElementById('cropButton');
+        let cropper, currentImageType;
+
         
         editProfileBtn.addEventListener('click', () => {
             editProfileModal.classList.add('show');
@@ -33,25 +35,59 @@
                 usernameDisplay.textContent = usernameInput.value;
             }
 
-            if (avatarInput.files && avatarInput.files[0]) {
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    userAvatar.src = e.target.result;
-                };
-                reader.readAsDataURL(avatarInput.files[0]);
-            }
-
-            if (bannerInput.files && bannerInput.files[0]){
-                const reader = new FileReader();
-                reader.onload = (e) => {
-                    userBanner.src = e.target.result;
-                };
-                reader.readAsDataURL(bannerInput.files[0]);
-            }
-
             editProfileModal.classList.remove('show');
-            
+});
+
+function openCropperModal(imageFile, type) {
+    currentImageType = type;
+    const reader = new FileReader();
+
+    reader.onload = (e) => {
+        imageToCrop.src = e.target.result;
+        cropperModal.classList.add('show');
+        overlay.classList.add('show');
+
+        if (cropper) {
+            cropper.destroy();
+        }
+        
+        cropper = new Cropper(imageToCrop, {
+            aspectRatio: type === 'avatar' ? 1 : 10 / 2,
+            viewMode: 2,
         });
+    };
+
+    reader.readAsDataURL(imageFile);
+}
+
+avatarInput.addEventListener('change', (e) => {
+    if (e.target.files && e.target.files[0]) {
+        openCropperModal(e.target.files[0], 'avatar');
+    }
+});
+
+bannerInput.addEventListener('change', (e) => {
+    if (e.target.files && e.target.files[0]) {
+        openCropperModal(e.target.files[0], 'banner');
+    }
+});
+
+cropButton.addEventListener('click', () => {
+    if (cropper) {
+        const canvas = cropper.getCroppedCanvas();
+        const croppedImage = canvas.toDataURL();
+
+        if (currentImageType === 'avatar') {
+            userAvatar.src = croppedImage;
+        } else {
+            userBanner.src = croppedImage;
+        }
+
+        cropperModal.classList.remove('show');
+        overlay.classList.remove('show');
+    }
+});
+
         document.getElementById('home').addEventListener('click', function() {
             window.location.href = 'home.html';
         });
