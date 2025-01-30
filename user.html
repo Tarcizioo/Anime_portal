@@ -13,10 +13,11 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.css">
         <link rel="stylesheet" href="user.css"> 
 </head>
 <body>
-    <div class="container">
+    <body class="container">
         <!-- Sidebar -->
         <nav class="sidebar">
             <ul>
@@ -33,7 +34,7 @@
         <!-- Main Content -->
         <div class="main-content">
             <div class="banner">
-                <input type="file" id="bannerImage" accept="image/*">
+                <img src="default-banner.jpg" alt="User Banner" id="userBanner">
             </div>
             <!-- Profile Section -->
             <div class="profile-header">
@@ -103,10 +104,18 @@
                     <input type="text" placeholder="Nome de Usuário" id="usernameInput">
                     <input type="email" placeholder="Email" id="emailInput">
                     <input type="file" id="avatarInput" accept="image/*">
+                    <input type="file" id="bannerInput" accept="image/*">
                     <button class="save-btn" id="saveProfileBtn">Salvar</button>
                     <button class="close-btn" id="closeModalBtn">Fechar</button>
                 </div>
-            </div>    
-
+            </div> 
+            <div id="overlay"></div>
+    <div id="cropperModal">
+        <img id="imageToCrop" src="" alt="Imagem para recortar">
+        <br>
+        <button id="cropButton">Cortar</button>
+    </div>
+    
+<script src="https://cdnjs.cloudflare.com/ajax/libs/cropperjs/1.5.12/cropper.min.js"></script>
     <script src="user.js"></script>
 </html>
