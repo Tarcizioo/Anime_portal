@@ -4,7 +4,8 @@
         const saveProfileBtn = document.getElementById('saveProfileBtn');
         const usernameDisplay = document.getElementById('usernameDisplay');
         const usernameInput = document.getElementById('usernameInput');
-        const emailInput = document.getElementById('emailInput');
+        const bioInput = document.getElementById('bioInput');
+        const bioDisplay = document.getElementById('bioDisplay');
         const avatarInput = document.getElementById('avatarInput');
         const userAvatar = document.getElementById('userAvatar');
         const bannerInput = document.getElementById('bannerInput');
@@ -33,6 +34,10 @@
         saveProfileBtn.addEventListener('click', () => {
             if (usernameInput.value) {
                 usernameDisplay.textContent = usernameInput.value;
+            }
+
+            if (bioInput.value) {
+                bioDisplay.textContent = bioInput.value;
             }
 
             editProfileModal.classList.remove('show');
