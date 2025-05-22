@@ -13,7 +13,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="anime_pages.css"> 
+        <link rel="stylesheet" href="../../css/anime_pages.css"> 
     </head> 
         <body>
 <div class="container">
@@ -33,7 +33,7 @@
 <!-- area principal -->
 <main class="main-content">
     <header class="header">
-        <h1>Bocchi The Rock!</h1>
+        <h1>Kaguya-sama:Love is War</h1>
         <div class="search-bar">
             <input type="text" id="searchInput" placeholder="Search for your favorite anime...">
             <button id="clearSearch" class="clear-search" style="display: none;">X</button>
@@ -45,16 +45,18 @@
     <div id="search-results" class="search-results">
     </div>
     <section class="anime-details">
-        <h2></h2>
+        <h2>Kaguya-sama wa Kokurasetai: Tensai-tachi no Renai Zunousen</h2>
         <div class="anime-info">
-            <img src="#" alt="aniem">
+            <img src="https://cdn.myanimelist.net/images/anime/1436/109969l.jpg?_gl=1*67cvdk*_gcl_au*MTM3NTcxMzcuMTcyODU5OTgwMA..*_ga*MTM2NjM1MTU5Ny4xNzIwODIxNDE4*_ga_26FEP9527K*MTczMjU1ODY1Mi4zMTkuMS4xNzMyNTYyMzYzLjMyLjAuMA.." alt="aniem">
             <div class="info">
-                <p><strong>Score:</strong></p>
-                <p><strong>Ranking:</strong></p>
-                <p><strong>Popularity:</strong></p>
-                <p><strong>Synopsis:</strong></p>
-                <p><strong>Background:</strong></p>
+                <p><strong>Score:</strong> 8.40</p>
+                <p><strong>Ranking:</strong> #193</p>
+                <p><strong>Popularity:</strong> #51</p>
+                <p><strong>Synopsis:</strong> At the renowned Shuchiin Academy, Miyuki Shirogane and Kaguya Shinomiya are the student body's top representatives. Ranked the top student in the nation and respected by peers and mentors alike, Miyuki serves as the student council president. Alongside him, the vice president Kaguya—eldest daughter of the wealthy Shinomiya family—excels in every field imaginable. They are the envy of the entire student body, regarded as the perfect couple.</p>
             </div>
+        </div>
+        <div class="video-section">
+            <iframe id="anime-video" width="560" height="315" src="https://www.youtube.com/watch?v=kmy4hX5eTzI" frameborder="0" allowfullscreen></iframe>
         </div>
     </section>
     <div class="anime-actions">
@@ -83,6 +85,7 @@
         
         <label for="episodes">Episódios Assistidos:</label>
         <input type="number" id="episodes" min="0" max="25" value="0"> / 25
+        <button id="update-episodes">Atualizar</button>
     </div>
         </section>
         </main>

@@ -1,5 +1,5 @@
 document.getElementById('createAccountButton').addEventListener('click', function() {
-    window.location.href = 'register.html'; // Redireciona para a página de registro
+    window.location.href = 'pages/register.html'; // Redireciona para a página de registro
 });
 
 document.getElementById('loginForm').addEventListener('submit', function(event) {
@@ -14,7 +14,7 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 
     if (userData && username === userData.username && password === userData.password) {
         localStorage.setItem('loggedInUser', JSON.stringify(userData));
-        window.location.href = 'home.html'; // Redireciona para a página principal
+        window.location.href = 'pages/home.html'; // Redireciona para a página principal
     } else {
         errorMessage.textContent = 'Nome de usuário ou senha incorretos!';
     }
